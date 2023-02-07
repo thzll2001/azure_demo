@@ -289,7 +289,9 @@ public class EventGridSample {
             //=============================================================
             // Authenticate
 
-            final File credFile = new File(System.getenv("AZURE_AUTH_LOCATION"));
+            final File credFile = new File("C:/software/azuredemo/doc/my.azureauth");
+
+                    //System.getenv("AZURE_AUTH_LOCATION"));
 
             ApplicationTokenCredentials credentials = ApplicationTokenCredentials.fromFile(credFile);
 
