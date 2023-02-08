@@ -18,11 +18,7 @@ public class AzureQueueService {
     final String getConnectStr(){
         return env.getProperty(CONNNECT_AZURE_QUEUE);
     }
-    final String connectStr =
-            "DefaultEndpointsProtocol=https;" +
-                    "AccountName=davidtorageccount1;" +
-                    "AccountKey=DefaultEndpointsProtocol=https;AccountName=davidtorageccount1;AccountKey=xaSYTlumGuqoK0SwjACPOTutoKUufN5taBX5N29JAwwTPTw6M3PJ/OjflDbNnX4WJQPRiJ5Iwx9p+AStaCpBUA==;EndpointSuffix=core.windows.net";
-
+    final String connectStr ="";
     public static String createQueue(String connectStr)
     {
         try
