@@ -1,4 +1,4 @@
-package org.example.functions;
+package org.azure.david.functions;
 
 import com.microsoft.azure.functions.annotation.*;
 import com.microsoft.azure.functions.*;
@@ -12,7 +12,7 @@ public class QueueTriggerFunction {
      */
     @FunctionName("QueueTrigger-Java")
     public void run(
-        @QueueTrigger(name = "message", queueName = "sample-queue", connection = "AzureStorageDemoConnectionStringSrc") String message,
+        @QueueTrigger(name = "message", queueName = "sample-queue", connection = "AzureStorageConnection") String message,
         final ExecutionContext context
     ) {
         context.getLogger().info("Java Queue trigger function processed a message: " + message);

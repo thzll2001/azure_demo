@@ -41,9 +41,9 @@ public class BlobTriggerJava1 {
      * This function will be invoked when a new or updated blob is detected at the specified path. The blob contents are provided as input to this function.
      */
     @FunctionName("BlobTriggerJava1")
-    @StorageAccount("davidtorageccount1")
+    //@StorageAccount("davidtorageccount1")
     public void run(
-        @BlobTrigger(name = "content", path = "con1/{name}", dataType = "binary") byte[] content,
+        @BlobTrigger(name = "content", path = "con1/{name}", dataType = "binary", connection = "AzureStorageConnection")  byte[] content,
         @BindingName("name") String name,
         final ExecutionContext context
     ) {
